@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.960
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Editor Helper", "Editor's Helper\Editor Helper.csproj", "{DBD7A71D-12F3-4EF0-8FBC-ED738F829219}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Burone Editor's Helper", "Burone Editor's Helper Setup\Burone Editor's Helper Setup.vdproj", "{0C055486-31F6-491A-A153-BB740BD6E5C0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DBD7A71D-12F3-4EF0-8FBC-ED738F829219}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DBD7A71D-12F3-4EF0-8FBC-ED738F829219}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DBD7A71D-12F3-4EF0-8FBC-ED738F829219}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DBD7A71D-12F3-4EF0-8FBC-ED738F829219}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C055486-31F6-491A-A153-BB740BD6E5C0}.Debug|Any CPU.ActiveCfg = Release
+		{0C055486-31F6-491A-A153-BB740BD6E5C0}.Release|Any CPU.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2284578F-D3A8-4787-8641-258F1C16B679}
+	EndGlobalSection
+EndGlobal
