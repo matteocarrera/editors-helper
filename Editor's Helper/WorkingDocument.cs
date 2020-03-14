@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Diagnostics;
-using System.Linq;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
@@ -12,6 +11,7 @@ namespace Editor_Helper
         public int InactiveTimer { get; set; }
         private readonly Main _main;
         public GlobalKeyboardHook gHook;
+        private readonly int[] _unusedKeys = { 37, 38, 39, 40, 93, 164 };
 
         [DllImport("user32.dll")]
         private static extern IntPtr GetWindowThreadProcessId(IntPtr hWnd, out uint ProcessId);
@@ -61,9 +61,7 @@ namespace Editor_Helper
                 if (program == _main.NameLabel.Text) processExists = true;
             }
 
-            if (processExists) processExists = false;
-            else
-                SetWarningWindow("Редактируемый файл был закрыт, подсчет времени остановлен.");
+            if (!processExists) SetWarningWindow("Редактируемый файл был закрыт, подсчет времени остановлен.");
         }
 
         private void SetWarningWindow(string message)
@@ -79,7 +77,7 @@ namespace Editor_Helper
 
         private void KeyDownHandler(object sender, KeyEventArgs e)
         {
-            if (GetActiveProcessFileName() == _main.NameLabel.Text)
+            if (GetActiveProcessFileName() == _main.NameLabel.Text && !Array.Exists(_unusedKeys, element => element == e.KeyValue))
             {
                 KeysCounter++;
                 _main.KeysLabel.Text = (Convert.ToInt32(_main.KeysLabel.Text) + 1).ToString();

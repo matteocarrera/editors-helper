@@ -174,6 +174,7 @@
             // 
             // gbActions
             // 
+            this.gbActions.BackColor = System.Drawing.Color.Transparent;
             this.gbActions.Controls.Add(this.StopButton);
             this.gbActions.Controls.Add(this.PauseButton);
             this.gbActions.Controls.Add(this.StartButton);
@@ -249,6 +250,8 @@
             // 
             // gbInfo
             // 
+            this.gbInfo.BackColor = System.Drawing.Color.Transparent;
+            this.gbInfo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.gbInfo.Controls.Add(this.KeysPressedChart);
             this.gbInfo.Controls.Add(this.KeysLabel);
             this.gbInfo.Controls.Add(this.KeysInfoLabel);
@@ -266,6 +269,7 @@
             // 
             // KeysPressedChart
             // 
+            this.KeysPressedChart.BackColor = System.Drawing.Color.Transparent;
             chartArea1.AxisX.IsLabelAutoFit = false;
             chartArea1.AxisX.LabelStyle.Font = new System.Drawing.Font("Century Gothic", 8.5F);
             chartArea1.AxisX.LineColor = System.Drawing.Color.Silver;
@@ -377,10 +381,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(552, 319);
             this.Controls.Add(this.gbInfo);
             this.Controls.Add(this.gbActions);
             this.Controls.Add(this.gbMenu);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.KeyPreview = true;
             this.MaximizeBox = false;
